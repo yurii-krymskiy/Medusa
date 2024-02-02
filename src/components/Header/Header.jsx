@@ -1,11 +1,13 @@
 import React from 'react'
 import './Header.scss'
-import { TiSocialFacebook } from "react-icons/ti";
+import logo from '../../assets/img/logo.png'
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { PiPhoneCall } from "react-icons/pi";
 import { IoLocationOutline } from "react-icons/io5";
 import { RiFacebookFill } from "react-icons/ri";
+import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 
 export const Header = () => {
@@ -34,12 +36,33 @@ export const Header = () => {
             <a href="https://maps.app.goo.gl/NX39vPdKHZoagKSy5" className='icon-container'>
               <IoLocationOutline className='icon' /> <p className='icon-container--text'>Avenida La Habana 9</p>
             </a>
-
           </div>
         </div>
       </div>
 
-      <div className='hrader__bottom'>
+      <div className='header__bottom'>
+        <div className='header__bottom-logo'>
+          <img src={logo} alt="logo" className='logo' />
+        </div>
+        <div className='header__bottom-menu'>
+          <nav className='header__bottom-nav'>
+            <ul className='header__bottom-list'>
+              <li>
+                <Link to="/about" className='header__bottom-link'>About</Link>
+              </li>
+              <li>
+                <Link to="/menu" className='header__bottom-link'>Menu</Link>
+              </li>
+              <li>
+                <Link to="/gallery" className='header__bottom-link'>Gallery</Link>
+              </li>
+              <li>
+                <Link to="/contact" className='header__bottom-link'>Contact</Link>
+              </li>
+            </ul>
+          </nav>
+          <Button />
+        </div>
       </div>
     </div>
   )

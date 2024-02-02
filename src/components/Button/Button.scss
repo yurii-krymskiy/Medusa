@@ -1,0 +1,18 @@
+.button {
+  height: 36px;
+  width: 135px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 12px;
+  background-color:  rgb(55, 55, 55);
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
