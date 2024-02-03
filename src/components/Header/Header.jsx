@@ -61,7 +61,7 @@ export const Header = () => {
               </li>
             </ul>
           </nav>
-          <Button />
+          <Button text="Book now" />
         </div>
       </div>
     </div>

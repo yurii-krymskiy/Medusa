@@ -1,12 +1,12 @@
 import React from 'react'
 import './Button.scss'
-const Button = () => {
+const Button = ({ text }) => {
   const handleButtonClick = () => {
     window.location.href = "tel:+34603839509";
   };
   return (
     <div>
-      <button className='button' onClick={handleButtonClick}>BOOK NOW</button>
+      <button className='button' onClick={handleButtonClick}>{text}</button>
     </div>
   )
 }
