@@ -2,7 +2,7 @@
   "name": "medusa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yurii-krymskiy.github.io/about",
+  "homepage": ".",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@react-google-maps/api": "^2.19.2",
