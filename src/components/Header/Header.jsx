@@ -48,7 +48,7 @@ export const Header = () => {
           <nav className='header__bottom-nav'>
             <ul className='header__bottom-list'>
               <li>
-                <Link to="/about" className='header__bottom-link'>About</Link>
+                <Link to="/" className='header__bottom-link'>About</Link>
               </li>
               <li>
                 <Link to="/menu" className='header__bottom-link'>Menu</Link>
