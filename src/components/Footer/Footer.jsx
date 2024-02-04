@@ -17,14 +17,14 @@ const Footer = () => {
           <img src={logo} alt="logo" className='footer-logo' />
           <div className='footer-socials'>
             <div className='about-section-2-info-bottom-socials'>
-              <a href="https://www.facebook.com/restaurantlamedusa" className='footer-icon'>
-                <FaFacebook className='icon' />
+              <a href="https://www.facebook.com/restaurantlamedusa">
+                <FaFacebook className='footer-icon' />
               </a>
-              <a href="https://www.instagram.com/la_medusa_tenerife/" className='footer-icon'>
-                <FaInstagram className='icon' />
+              <a href="https://www.instagram.com/la_medusa_tenerife/">
+                <FaInstagram className='footer-icon' />
               </a>
-              <a href="https://wa.me/34603839509" className='footer-icon'>
-                <FaWhatsapp className='icon' />
+              <a href="https://wa.me/34603839509">
+                <FaWhatsapp className='footer-icon' />
               </a>
             </div>
           </div>

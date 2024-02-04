@@ -49,13 +49,13 @@ const About = () => {
               <p className='about-section-2-info-bottom-block-title'>STAY TUNED</p>
               <div className='about-section-2-info-bottom-socials'>
                 <a href="https://www.facebook.com/restaurantlamedusa" className='icon-container icon-container--dark'>
-                  <FaFacebook className='icon' />
+                  <FaFacebook />
                 </a>
                 <a href="https://www.instagram.com/la_medusa_tenerife/" className='icon-container icon-container--dark'>
-                  <FaInstagram className='icon' />
+                  <FaInstagram />
                 </a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g187479-d20257413-Reviews-Restaurant_La_Medusa_Cocktail_Bar-Tenerife_Canary_Islands.html" className='icon-container icon-container--dark'>
-                  <FaTripadvisor className='icon' />
+                  <FaTripadvisor />
                 </a>
               </div>
             </div>
@@ -166,7 +166,7 @@ const About = () => {
               <img src={icon1} alt="icon" className='about-section-6-icon' />
               <p className='about-section-6-icon-title'>Dinner</p>
             </div>
-            <div className='about-section-6-icon-block'>
+            <div className='about-section-6-icon-block about-section-6-icon-block--second'>
               <img src={icon2} alt="icon" className='about-section-6-icon' />
               <p className='about-section-6-icon-title'>Breakfast</p>
             </div>
@@ -184,17 +184,17 @@ const About = () => {
             <div className='about-section-7-block'>
               <img src={block1} alt="img" className='about-section-7-img' />
               <h3 className='about-section-7-title'>Cocktails</h3>
-              <p className='about-section-7-desc'>Exquisite cocktails from the best<br /> bartenders</p>
+              <p className='about-section-7-desc'>Exquisite cocktails from the best<br className='br-none' /> bartenders</p>
             </div>
             <div className='about-section-7-block'>
               <img src={block2} alt="img" className='about-section-7-img about-section-7-img--big' />
               <h3 className='about-section-7-title'>Food</h3>
-              <p className='about-section-7-desc'>Delicious food and a beautiful view of the<br /> ocean</p>
+              <p className='about-section-7-desc'>Delicious food and a beautiful view of the<br className='br-none' /> ocean</p>
             </div>
             <div className='about-section-7-block'>
               <img src={block3} alt="img" className='about-section-7-img' />
               <h3 className='about-section-7-title'>Music</h3>
-              <p className='about-section-7-desc'>Live music every day with different<br /> artists</p>
+              <p className='about-section-7-desc'>Live music every day with different<br className='br-none' /> artists</p>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Gallery from './components/Gallery/Gallery';
 import Contact from './components/Contact/Contact';
 import Menu from './components/Menu/Menu';
+import HeaderMobile from './components/HeaderMobile/HeaderMobile';
 
 import './assets/SCSS/App.scss'
 
@@ -14,12 +15,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
+        <HeaderMobile />
         <Routes>
-          <Route path="/" element={<About />}>
+          <Route path="/">
+            <Route index element={<About />} />
             <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="gallery" element={<Gallery />} />
             <Route path="menu" element={<Menu />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
         <Footer />

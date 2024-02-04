@@ -61,6 +61,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-right: 240px;
 
     &::before {
       content: '';
@@ -76,7 +77,6 @@
     }
 
     &-menu {
-      padding-right: 240px;
       position: relative;
       display: flex;
       flex-direction: row;
@@ -142,5 +142,14 @@
 }
 
 .logo {
-  height: 100%;
+  position: relative;
+  width: 190px;
+  height: 27px;
+}
+
+/* ваші стилі для телефонів та інших пристроїв з екраном до 768px */
+@media only screen and (max-width: 1023px) {
+  .header {
+    display: none;
+  }
 }
