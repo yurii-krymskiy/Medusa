@@ -18,7 +18,6 @@ function App() {
         <HeaderMobile />
         <Routes>
           <Route path="/">
-            <Route index element={<About />} />
             <Route path="about" element={<About />} />
             <Route path="menu" element={<Menu />} />
             <Route path="gallery" element={<Gallery />} />

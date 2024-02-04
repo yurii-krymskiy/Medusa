@@ -43,9 +43,10 @@
       height: 400px;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 30px;
+      width: 1170px;
+      margin: auto;
 
       &-block-1 {
         display: flex;
