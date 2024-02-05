@@ -18,7 +18,7 @@ function App() {
         <HeaderMobile />
         <Routes>
           <Route>
-            <Route path="/Medusa" element={<About />} />
+            <Route path="./" element={<About />} />
             <Route path="/about" element={<About to="/" replace />} />
 
             <Route path="/menu" element={<Menu />} />
