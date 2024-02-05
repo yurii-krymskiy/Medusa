@@ -17,11 +17,14 @@ import block1 from '../../assets/img/about-section-7-1.jpeg'
 import block2 from '../../assets/img/about-section-7-2.jpeg'
 import block3 from '../../assets/img/about-section-7-3.jpeg'
 
-
+import pdfMenu from '../../assets/file/menu.pdf'
 
 const About = () => {
   const handleButtonClick = () => {
     window.location.href = "tel:+34603839509";
+  };
+  const openPdfMenu = () => {
+    window.open(pdfMenu, '_blank');
   };
   return (
     <div className='about'>
@@ -101,6 +104,7 @@ const About = () => {
               option2="In sweet and sour sause"
               btn="View Menu"
               color="green"
+              onClick={openPdfMenu}
             />
             <Card
               img={card2}
@@ -112,6 +116,7 @@ const About = () => {
               color="white"
               text="white"
               back="green"
+              onClick={handleButtonClick}
             />
             <Card
               img={card3}
@@ -121,6 +126,7 @@ const About = () => {
               option2="Tartare sauce"
               btn="Reservation"
               color="green"
+              onClick={handleButtonClick}
             />
           </div>
           <div className='about-section-5-bottom'>

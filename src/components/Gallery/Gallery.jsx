@@ -104,9 +104,6 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-      <div className='gallery-section-4'>
-
-      </div>
     </div>
   )
 }

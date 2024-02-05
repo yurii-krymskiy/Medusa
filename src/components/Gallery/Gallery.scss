@@ -44,9 +44,12 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      gap: 10px;
       align-items: center;
-      width: 1170px;
+      width: 100%;
       margin: auto;
+      padding: 0 15%;
+
 
       &-block-1 {
         display: flex;
@@ -109,10 +112,12 @@
       margin-bottom: 30px;
 
       &-grid-container {
-        width: 1170px;
+        padding: 0 15%;
+        width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, minmax(290px, 1fr));
+        grid-template-columns: repeat(4, minmax(20%, 1fr));
         justify-items: center;
+        gap: 5px;
         margin: auto;
       }
 
@@ -125,22 +130,23 @@
       }
 
       &-grid-img {
-        width: 290px;
-        height: 213px;
+        width: 100%;
+        height: 100%;
       }
 
       &-bottom {
-        padding-top: 70px;
-        padding-bottom: 50px;
-        width: 1170px;
+        padding: 70px 15% 50px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin: auto;
+        gap: 10px;
 
         &-block {
           display: flex;
           flex-direction: row;
+          gap: 10px;
         }
       }
 
@@ -166,7 +172,7 @@
       }
 
       &-paragraph {
-        width: 277px;
+        width: 100%;
         font-size: 14px;
         font-weight: 300;
         line-height: 2em;
@@ -205,8 +211,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-  
-  
+
+
         &::before {
           content: '';
           background-image: url('../../assets/img/about-section-4.jpeg');
@@ -219,7 +225,7 @@
           height: 350px;
           filter: brightness(75%);
         }
-  
+
         &-content {
           position: relative;
           display: flex;
@@ -227,7 +233,7 @@
           align-items: center;
           width: 100%;
         }
-  
+
         &-title {
           font-family: 'Playfair Display', sans-serif;
           color: #FFFFFF;
@@ -236,7 +242,7 @@
           letter-spacing: 4px;
         }
       }
-  
+
       &-2 {
         margin-top: 50px;
         width: 100%;
@@ -246,7 +252,7 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
-  
+
         &-block-1 {
           display: flex;
           flex-direction: column;
@@ -254,7 +260,7 @@
           text-align: right;
           width: 94%;
         }
-  
+
         &-block {
           display: flex;
           flex-direction: column;
@@ -267,16 +273,16 @@
           background-size: cover;
           width: 100%;
           height: 300px;
-  
+
           &-2 {
             background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/img/gallery1.jpeg');
           }
-  
+
           &-3 {
             background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/img/gallery2.jpeg');
           }
         }
-  
+
         &-heading {
           color: #FFFFFF;
           font-weight: normal;
@@ -285,7 +291,7 @@
           letter-spacing: 2px;
           font-family: 'Playfair Display', sans-serif;
         }
-  
+
         &-desc {
           font-family: 'Roboto', sans-serif;
           color: #FFFFFF;
@@ -293,7 +299,7 @@
           line-height: 1em;
           letter-spacing: 4px;
         }
-  
+
         &-title {
           width: 100%;
           text-align: center;
@@ -304,67 +310,66 @@
           font-family: 'Playfair Display', sans-serif;
         }
       }
-  
+
       &-3 {
         margin-top: 70px;
         height: 100%;
         margin-bottom: 30px;
-  
+
         &-grid-container {
           width: 100%;
           padding: 0 15px;
           display: grid;
-          grid-template-columns: repeat(4, minmax(70px, 1fr)); /* Змініть 200px на бажаний розмір картки */
-          gap: 5px; /* Встановлює зазор між елементами сітки */
+          grid-template-columns: repeat(4, minmax(70px, 1fr));
+          gap: 5px;
           justify-items: center;
-          align-items: center; /* Вирівнює картки по центру вертикально */
+          align-items: center;
           margin-top: 70px;
           margin-bottom: 30px;
         }
-  
+
         &-grid-item {
           cursor: pointer;
           height: 100%;
-  
+
           &:hover {
             filter: brightness(70%);
           }
         }
-  
+
         &-grid-img {
-          max-width: 100%; /* Гарантуємо, що зображення не виходять за межі відведеного місця */
+          max-width: 100%;
           height: 100%;
         }
-  
+
         &-bottom {
-          padding-top: 70px;
-          padding-bottom: 50px;
+          padding: 0;
           width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
           margin: auto;
-  
+
           &-block {
             display: flex;
             align-items: center;
             flex-direction: column;
           }
         }
-  
+
         &-icon {
           width: 75px;
           height: 75px;
           margin-bottom: 20px;
         }
-  
+
         &-info {
           text-align: center;
           display: flex;
           flex-direction: column;
         }
-  
+
         &-heading {
           padding-top: 5px;
           margin-bottom: 5px;
@@ -375,9 +380,9 @@
           font-size: 20px;
           margin-bottom: 10px;
         }
-  
+
         &-paragraph {
-          width: 277px;
+          width: 240px;
           font-size: 14px;
           font-weight: 300;
           line-height: 2em;
@@ -389,21 +394,22 @@
       }
     }
   }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .selected-photo {
-    max-width: 90%;
-    max-height: 90%;
+}
+
+
+@media only screen and (min-width: 750px) {
+  .gallery {
+    &-section {
+      &-3 {
+        &-bottom {
+          flex-direction: row;
+          width: 100%;
+
+          &-block {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }

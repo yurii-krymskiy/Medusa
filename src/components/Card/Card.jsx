@@ -2,7 +2,7 @@ import React from 'react'
 import './Card.scss'
 import { IoMdCheckmark } from "react-icons/io";
 
-const Card = ({ img, title, price, option1, option2, btn, color, back, text }) => {
+const Card = ({ img, title, price, option1, option2, btn, color, back, text, onClick }) => {
   return (
     <div className='card'>
       <div className={`card-content card-content--${back} card-content--${text}`}>
@@ -18,7 +18,7 @@ const Card = ({ img, title, price, option1, option2, btn, color, back, text }) =
           <div className='card-option'>
             <IoMdCheckmark width={14} /><p>{option2}</p>
           </div>
-          <button className={`card-button card-button--${color}`}>{btn}</button>
+          <button onClick={onClick} className={`card-button card-button--${color}`}>{btn}</button>
         </div>
       </div>
     </div>
