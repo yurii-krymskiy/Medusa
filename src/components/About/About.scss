@@ -594,6 +594,10 @@
   
         &-info {
           gap: 20px;
+
+          &-title-1 {
+            text-align: center;
+          }
   
           &-title-2 {
             font-size: 30px;
@@ -665,6 +669,10 @@
   
         &-paragraph-2 {
           width: 280px;
+        }
+
+        &-button-white {
+          color: #1c1c1c;
         }
   
 
