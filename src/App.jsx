@@ -17,11 +17,13 @@ function App() {
         <Header />
         <HeaderMobile />
         <Routes>
-          <Route path="/">
-            <Route index element={<About />} />
-            <Route path="menu" element={<Menu />} />
-            <Route path="gallery" element={<Gallery />} />
-            <Route path="contact" element={<Contact />} />
+          <Route>
+            <Route path="/" element={<About />} />
+            <Route path="/about" element={<About to="/" replace />} />
+
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
         <Footer />
