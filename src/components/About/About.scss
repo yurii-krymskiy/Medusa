@@ -671,11 +671,12 @@
           width: 280px;
         }
 
-        &-button-white {
-          color: #1c1c1c;
+        &-button {
+          &-white {
+            color: #1c1c1c;
+          }
         }
   
-
         &-btn-container {
           flex-direction: column;
         }
