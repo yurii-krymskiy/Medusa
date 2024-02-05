@@ -69,7 +69,7 @@ const About = () => {
         <div className='about-section-3-content'>
           <p className='about-section-3-title'>Reserve</p>
           <div>
-            <img src={img2} alt="phone" className='about-section-3-icon' />
+            <img src={img2} alt="phone" className='about-section-3-icon' onClick={handleButtonClick} />
           </div>
           <div className='about-section-3-info'>
             <p className='about-section-3-info-call'>Call</p>
