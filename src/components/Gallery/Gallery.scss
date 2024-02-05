@@ -311,16 +311,20 @@
         margin-bottom: 30px;
   
         &-grid-container {
-          padding: 0 15px;
           width: 100%;
+          padding: 0 15px;
           display: grid;
-          grid-template-columns: repeat(4, minmax(70px, 1fr));
+          grid-template-columns: repeat(4, minmax(70px, 1fr)); /* Змініть 200px на бажаний розмір картки */
+          gap: 5px; /* Встановлює зазор між елементами сітки */
           justify-items: center;
-          margin: auto;
+          align-items: center; /* Вирівнює картки по центру вертикально */
+          margin-top: 70px;
+          margin-bottom: 30px;
         }
   
         &-grid-item {
           cursor: pointer;
+          height: 100%;
   
           &:hover {
             filter: brightness(70%);
@@ -328,8 +332,8 @@
         }
   
         &-grid-img {
-          width: 70px;
-          height: 51px;
+          max-width: 100%; /* Гарантуємо, що зображення не виходять за межі відведеного місця */
+          height: 100%;
         }
   
         &-bottom {
