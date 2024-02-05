@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import About from './components/About/About';
@@ -13,19 +13,19 @@ import './assets/SCSS/App.scss'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <HeaderMobile />
         <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
 
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
