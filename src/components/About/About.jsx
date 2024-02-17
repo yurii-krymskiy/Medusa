@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './About.scss'
 import '../Header/Header.scss'
 import img1 from '../../assets/img/about-section-2.jpeg'
@@ -18,6 +18,8 @@ import block2 from '../../assets/img/about-section-7-2.jpeg'
 import block3 from '../../assets/img/about-section-7-3.jpeg'
 
 import pdfMenu from '../../assets/file/menu.pdf'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
   const handleButtonClick = () => {
@@ -26,15 +28,22 @@ const About = () => {
   const openPdfMenu = () => {
     window.open(pdfMenu, '_blank');
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div className='about'>
       <div className='about-section-1'>
         <div className='about-section-1-title-container'>
-          <h1 className='about-section-1-title'>Feel the taste<br /> of Tenerife</h1>
+          <h1 className='about-section-1-title' data-aos="fade-up"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine" data-aos-duration="1000">Feel the taste<br /> of Tenerife</h1>
         </div>
         <div className='about-section-1-block'></div>
       </div>
-      <div className='about-section-2'>
+      <div className='about-section-2' data-aos="fade-up">
         <div className='about-section-2-img-container'>
           <img src={img1} alt="" className='about-section-2-img' />
         </div>
@@ -46,7 +55,7 @@ const About = () => {
           <div className='about-section-2-info-bottom'>
             <div className='about-section-2-info-bottom-block'>
               <p className='about-section-2-info-bottom-block-title'>EMAIL</p>
-              <a className='about-section-2-info-bottom-block-email' href="mailto:lamedusarestaurant@gmail.com">lamedusarestaurant@gmail.com</a>
+              <a className='about-section-2-info-bottom-block-email' href="mailto:lamedusarestaurants@gmail.com">lamedusarestaurants@gmail.com</a>
             </div>
             <div className='about-section-2-info-bottom-block'>
               <p className='about-section-2-info-bottom-block-title'>STAY TUNED</p>
@@ -65,7 +74,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='about-section-3'>
+      <div className='about-section-3' data-aos="fade-down">
         <div className='about-section-3-content'>
           <p className='about-section-3-title'>Reserve</p>
           <div>
@@ -77,7 +86,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='about-section-4'>
+      <div className='about-section-4' data-aos="fade-up" >
         <div className='about-section-4-content'>
           <p className='about-section-4-paragraph-1'>FACILITIES & MORE</p>
           <h2 className='about-section-4-title'>Services</h2>
@@ -131,27 +140,27 @@ const About = () => {
           </div>
           <div className='about-section-5-bottom'>
             <div className='about-section-5-bottom-container'>
-              <div className='about-section-5-block'>
+              <div className='about-section-5-block' data-aos="zoom-in-up">
                 <p className='about-section-5-num'>01</p>
                 <div className='about-section-5-line'></div>
                 <p className='about-section-5-title'>MUSIC</p>
                 <p className='about-section-5-paragraph'>Our restaurant has live music 7 days a week with different artists</p>
               </div>
-              <div className='about-section-5-block'>
+              <div className='about-section-5-block' data-aos="zoom-in-down">
                 <p className='about-section-5-num'>02</p>
                 <div className='about-section-5-line'></div>
                 <p className='about-section-5-title'>BAR</p>
                 <p className='about-section-5-paragraph'>Our bartenders make the best cocktails in all of Tenerife</p>
               </div>
             </div>
-            <div className='about-section-5-bottom-container'>
+            <div className='about-section-5-bottom-container' data-aos="zoom-in-up">
               <div className='about-section-5-block'>
                 <p className='about-section-5-num'>03</p>
                 <div className='about-section-5-line'></div>
                 <p className='about-section-5-title'>Menu</p>
                 <p className='about-section-5-paragraph'>Our menu has a choice of any dishes, not only seafood but also good meat</p>
               </div>
-              <div className='about-section-5-block'>
+              <div className='about-section-5-block' data-aos="zoom-in-down">
                 <p className='about-section-5-num'>04</p>
                 <div className='about-section-5-line'></div>
                 <p className='about-section-5-title'>LOCATION</p>
@@ -164,9 +173,9 @@ const About = () => {
       </div>
       <div className='about-section-6'>
         <div className='about-section-6-content'>
-          <p className='about-section-6-title'>LA MEDUSA</p>
-          <p className='about-section-6-meal'>Steak New York</p>
-          <p className='about-section-6-price'>26 €</p>
+          <p className='about-section-6-title' data-aos="fade-down">LA MEDUSA</p>
+          <p className='about-section-6-meal' data-aos="fade-down">Steak New York</p>
+          <p className='about-section-6-price' data-aos="fade-down">26 €</p>
           <div className='about-section-6-second-content'>
             <div className='about-section-6-icon-block'>
               <img src={icon1} alt="icon" className='about-section-6-icon' />
@@ -187,17 +196,17 @@ const About = () => {
         <div className='about-section-7-content'>
           <h2 className='about-section-7-main-title'>We Offer</h2>
           <div className='about-section-7-container'>
-            <div className='about-section-7-block'>
+            <div className='about-section-7-block' data-aos="fade-up">
               <img src={block1} alt="img" className='about-section-7-img' />
               <h3 className='about-section-7-title'>Cocktails</h3>
               <p className='about-section-7-desc'>Exquisite cocktails from the best<br className='br-none' /> bartenders</p>
             </div>
-            <div className='about-section-7-block'>
+            <div className='about-section-7-block' data-aos="flip-down">
               <img src={block2} alt="img" className='about-section-7-img about-section-7-img--big' />
               <h3 className='about-section-7-title'>Food</h3>
               <p className='about-section-7-desc'>Delicious food and a beautiful view of the<br className='br-none' /> ocean</p>
             </div>
-            <div className='about-section-7-block'>
+            <div className='about-section-7-block' data-aos="fade-up">
               <img src={block3} alt="img" className='about-section-7-img' />
               <h3 className='about-section-7-title'>Music</h3>
               <p className='about-section-7-desc'>Live music every day with different<br className='br-none' /> artists</p>

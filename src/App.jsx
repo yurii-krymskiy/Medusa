@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // зміна BrowseRouter на BrowserRouter
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import About from './components/About/About';
@@ -9,23 +9,71 @@ import Menu from './components/Menu/Menu';
 import HeaderMobile from './components/HeaderMobile/HeaderMobile';
 
 import './assets/SCSS/App.scss'
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        <Header />
-        <HeaderMobile />
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/"
+            element={
+              <div>
+                <Header />
+                <HeaderMobile />
+                <About />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <div>
+                <Header />
+                <HeaderMobile />
+                <About />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/menu"
+            element={
+              <div>
+                <Header />
+                <HeaderMobile />
+                <Menu />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <div>
+                <Header />
+                <HeaderMobile />
+                <Gallery />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <div>
+                <Header />
+                <HeaderMobile />
+                <Contact />
+                <Footer />
+              </div>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

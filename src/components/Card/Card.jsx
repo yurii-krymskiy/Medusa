@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Card.scss'
 import { IoMdCheckmark } from "react-icons/io";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Card = ({ img, title, price, option1, option2, btn, color, back, text, onClick }) => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
   return (
-    <div className='card'>
+    <div className='card' data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom">
       <div className={`card-content card-content--${back} card-content--${text}`}>
         <div className='card-img-container'>
           <img src={img} alt="img" className='card-img' />
