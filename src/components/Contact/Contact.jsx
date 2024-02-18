@@ -12,6 +12,10 @@ const Contact = () => {
   const form = useRef();
   const [formError, setFormError] = useState(null);
 
+  const handleButtonClick = () => {
+    window.location.href = "tel:+34603839509";
+  };
+
   const sendEmail = async (e) => {
     e.preventDefault();
 
@@ -50,7 +54,7 @@ const Contact = () => {
           <p className='contact-section-2-paragraph'>RESERVE A TABLE</p>
           <h2 className='contact-section-2-heading'>Get In Touch</h2>
           <p className='contact-section-2-desc'>A great place to relax and enjoy unique seafood<br className='br-none' /> cuisine.</p>
-          <button className='contact-section-2-button'>Call</button>
+          <button className='contact-section-2-button' onClick={handleButtonClick}>Call</button>
         </div>
         <form ref={form} className='contact-section-2-form' onSubmit={sendEmail} data-aos="fade-up">
           <input type="text" name="user_name" placeholder='Name' className='contact-section-2-input' required />
@@ -72,7 +76,7 @@ const Contact = () => {
           </div>
           <div className='contact-section-3-item'>
             <FaPhoneAlt className='icon' />
-            <p className='contact-section-3-paragraph'>
+            <p className='contact-section-3-paragraph contact-section-3-paragraph--call' onClick={handleButtonClick}>
               Phone +34 603 83 95 09
             </p>
           </div>

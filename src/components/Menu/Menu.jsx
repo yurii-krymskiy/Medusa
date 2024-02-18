@@ -8,7 +8,7 @@ import menu4 from '../../assets/img/menu4.jpeg'
 import menu5 from '../../assets/img/menu5.jpeg'
 import Meal from '../Meal/Meal'
 
-import pdfMenu from '../../assets/file/menu.pdf'
+import pdfMenu from '../../assets/file/menu1.pdf'
 import pdfDrinks from '../../assets/file/drinks.pdf'
 import pdfBar from '../../assets/file/bar.pdf'
 import pdfWine from '../../assets/file/wine.pdf'

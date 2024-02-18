@@ -81,8 +81,8 @@ const About = () => {
             <img src={img2} alt="phone" className='about-section-3-icon' onClick={handleButtonClick} />
           </div>
           <div className='about-section-3-info'>
-            <p className='about-section-3-info-call'>Call</p>
-            <p className='about-section-3-info-call'>+34 603 83 95 09</p>
+            <p className='about-section-3-info-call' onClick={handleButtonClick}>Call</p>
+            <p className='about-section-3-info-call' onClick={handleButtonClick}>+34 603 83 95 09</p>
           </div>
         </div>
       </div>
