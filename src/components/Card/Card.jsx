@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-const Card = ({ img, title, price, option1, option2, btn, color, back, text, onClick }) => {
+const Card = ({ img, title, price, option1, option2, btn, color, back, text, onClick, menu }) => {
 
   useEffect(() => {
     AOS.init();
@@ -14,7 +14,7 @@ const Card = ({ img, title, price, option1, option2, btn, color, back, text, onC
 
   return (
     <div className='card' data-aos="fade-up"
-    data-aos-anchor-placement="top-bottom">
+      data-aos-anchor-placement="top-bottom">
       <div className={`card-content card-content--${back} card-content--${text}`}>
         <div className='card-img-container'>
           <img src={img} alt="img" className='card-img' />
@@ -28,7 +28,11 @@ const Card = ({ img, title, price, option1, option2, btn, color, back, text, onC
           <div className='card-option'>
             <IoMdCheckmark width={14} /><p>{option2}</p>
           </div>
-          <button onClick={onClick} className={`card-button card-button--${color}`}>{btn}</button>
+          {menu ? (
+            <button onClick={onClick && onClick} className={`card-button card-button--${color}`}>{btn}</button>
+          ) : (
+            <a href="tel:+34603839509" className={`card-button card-button--${color}`}>{btn}</a>
+          )}
         </div>
       </div>
     </div>

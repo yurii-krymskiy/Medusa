@@ -187,6 +187,7 @@
           font-weight: 100;
           font-size: 30px;
           color: white;
+          text-decoration: none;
         }
       }
     }
@@ -261,6 +262,7 @@
         border: none;
         cursor: pointer;
         transition: transform 0.2s ease-in-out;
+        text-decoration: none;
 
         &:hover {
           transform: scale(0.9);
@@ -269,6 +271,11 @@
         &--green {
           background-color: #1a4c56;
           color: white;
+        }
+
+        &--white {
+          color: black;
+          background-color: white;
         }
       }
 

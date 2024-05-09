@@ -25,10 +25,6 @@ const HeaderMobile = () => {
     setMenuOpen(false);
   };
 
-  const handleButtonClick = () => {
-    window.location.href = "tel:+34603839509";
-  };
-
   return (
     <div className={`header-mobile ${menuOpen ? 'menu-open' : ''}`}>
       <div className='header-mobile-content'>
@@ -36,7 +32,7 @@ const HeaderMobile = () => {
         <div>
           <RxHamburgerMenu className='icon-burger' onClick={toggleMenu} />
         </div>
-        <button className='header-mobile-button' onClick={handleButtonClick}>BOOK NOW</button>
+        <a href="tel:+34603839509" className='header-mobile-button'>BOOK NOW</a>
       </div>
       <div className={`menu ${menuOpen ? 'open' : 'closed'}`}>
         <IoIosCloseCircleOutline className='icon-close' onClick={toggleMenu} />

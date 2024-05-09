@@ -4,28 +4,28 @@ import { MdLocationOn } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import emailjs from '@emailjs/browser';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Contact = () => {
   const form = useRef();
   const [formError, setFormError] = useState(null);
-
-  const handleButtonClick = () => {
-    window.location.href = "tel:+34603839509";
-  };
+  const [utmData, setUtmData] = useState({});
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
     try {
-      const result = await emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY);
+      const result = await emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      );
+
       console.log(result.text);
-      // Clear the form after successful submission
       form.current.reset();
       setFormError(null);
-      // Show success message
       alert('Message sent successfully!');
     } catch (error) {
       console.error(error.text);
@@ -33,14 +33,23 @@ const Contact = () => {
     }
   };
 
-
   const handleOnMapClick = () => {
     window.location.href = "https://www.google.com/maps?q=Avenida La Habana 9";
   };
 
   useEffect(() => {
     AOS.init();
-  }, [])
+
+    const cookies = document.cookie.split(';');
+    const utmValues = {};
+    cookies.forEach(cookie => {
+      const [key, value] = cookie.trim().split('=');
+      if (key.startsWith('utm_')) {
+        utmValues[key] = value;
+      }
+    });
+    setUtmData(utmValues);
+  }, []);
 
   return (
     <div className='contact'>
@@ -54,13 +63,16 @@ const Contact = () => {
           <p className='contact-section-2-paragraph'>RESERVE A TABLE</p>
           <h2 className='contact-section-2-heading'>Get In Touch</h2>
           <p className='contact-section-2-desc'>A great place to relax and enjoy unique seafood<br className='br-none' /> cuisine.</p>
-          <button className='contact-section-2-button' onClick={handleButtonClick}>Call</button>
+          <a className='contact-section-2-button' href="tel:+34603839509">Call</a>
         </div>
         <form ref={form} className='contact-section-2-form' onSubmit={sendEmail} data-aos="fade-up">
           <input type="text" name="user_name" placeholder='Name' className='contact-section-2-input' required />
           <input type="email" name="user_email" placeholder='Email' className='contact-section-2-input' required />
           <input type="tel" name="user_phone" placeholder='Phone' className='contact-section-2-input' required />
-          <textarea placeholder='Message' name="message" className='contact-section-2-input contact-section-2-textarea' required />
+          <textarea type="text" name="message" placeholder='Message' className='contact-section-2-input contact-section-2-textarea' required />
+          <input type="hidden" name="utm_campaign" value={utmData.utm_campaign || ''} placeholder='UTM Campaign' className='contact-section-2-input' />
+          <input type="hidden" name="utm_medium" value={utmData.utm_medium || ''} placeholder='UTM Medium' className='contact-section-2-input' />
+          <input type="hidden" name="utm_source" value={utmData.utm_source || ''} placeholder='UTM Source' className='contact-section-2-input' />
           {formError && <p className="error-message">{formError}</p>}
           <button type="submit" className='contact-section-2-form-button'>SEND</button>
         </form>
@@ -76,7 +88,7 @@ const Contact = () => {
           </div>
           <div className='contact-section-3-item'>
             <FaPhoneAlt className='icon' />
-            <p className='contact-section-3-paragraph contact-section-3-paragraph--call' onClick={handleButtonClick}>
+            <p className='contact-section-3-paragraph contact-section-3-paragraph--call' href="tel:+34603839509">
               Phone +34 603 83 95 09
             </p>
           </div>

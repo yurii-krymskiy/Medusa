@@ -93,6 +93,10 @@
     height: 39px;
     border: none;
     transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &--green {
       background-color: #509CAB;

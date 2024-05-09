@@ -5,7 +5,7 @@ import img1 from '../../assets/img/about-section-2.jpeg'
 import img2 from '../../assets/icon/phone-icon.png'
 import card1 from '../../assets/img/card-1.jpeg'
 import card2 from '../../assets/img/card-2.jpeg'
-import card3 from '../../assets/img/card-3.jpeg'
+import card3 from '../../assets/img/card-3.png'
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTripadvisor } from "react-icons/fa";
@@ -22,9 +22,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const About = () => {
-  const handleButtonClick = () => {
-    window.location.href = "tel:+34603839509";
-  };
   const openPdfMenu = () => {
     window.open(pdfMenu, '_blank');
   };
@@ -43,6 +40,7 @@ const About = () => {
         </div>
         <div className='about-section-1-block'></div>
       </div>
+      <div style={{ display: 'none' }}><a href="tel:+34822268012">822 268 012</a></div>
       <div className='about-section-2' data-aos="fade-up">
         <div className='about-section-2-img-container'>
           <img src={img1} alt="" className='about-section-2-img' />
@@ -78,11 +76,11 @@ const About = () => {
         <div className='about-section-3-content'>
           <p className='about-section-3-title'>Reserve</p>
           <div>
-            <img src={img2} alt="phone" className='about-section-3-icon' onClick={handleButtonClick} />
+            <a href="tel:+34603839509"> <img src={img2} alt="phone" className='about-section-3-icon' /></a>
           </div>
           <div className='about-section-3-info'>
-            <p className='about-section-3-info-call' onClick={handleButtonClick}>Call</p>
-            <p className='about-section-3-info-call' onClick={handleButtonClick}>+34 603 83 95 09</p>
+            <a className='about-section-3-info-call' href="tel:+34603839509">Call</a>
+            <a className='about-section-3-info-call' href="tel:+34603839509">+34 603 83 95 09</a>
           </div>
         </div>
       </div>
@@ -96,8 +94,8 @@ const About = () => {
           </p>
           <div>
             <div className='about-section-4-btn-container'>
-              <button className='about-section-4-button about-section-4-button--green' onClick={handleButtonClick}>REQUEST NOW</button>
-              <button className='about-section-4-button about-section-4-button-white' onClick={handleButtonClick}>CONTACT US</button>
+              <a className='about-section-4-button about-section-4-button--green' href="tel:+34603839509">REQUEST NOW</a>
+              <a className='about-section-4-button about-section-4-button--white' href="tel:+34603839509">CONTACT US</a>
             </div>
           </div>
         </div>
@@ -114,6 +112,7 @@ const About = () => {
               btn="View Menu"
               color="green"
               onClick={openPdfMenu}
+              menu={true}
             />
             <Card
               img={card2}
@@ -125,7 +124,6 @@ const About = () => {
               color="white"
               text="white"
               back="green"
-              onClick={handleButtonClick}
             />
             <Card
               img={card3}
@@ -135,7 +133,6 @@ const About = () => {
               option2="Tartare sauce"
               btn="Reservation"
               color="green"
-              onClick={handleButtonClick}
             />
           </div>
           <div className='about-section-5-bottom'>
